@@ -1,0 +1,67 @@
+@model IEnumerable<PLP.Models.OfficeTime>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    &nbsp;
+</p>
+<div class="textCenter">
+    <h1>Office Time</h1>
+</div>
+<div class="buttoncontainer">
+    @Html.ActionLink("", "Index", "Meditation", null, new { @class = "glyphicon glyphicon-chevron-left" })
+    <a href="https://open.spotify.com/user/playlistpro_mvc/playlist/20XBuwMAagl4MpRrHZ1sBZ"
+       class="btn btn-warning btn-lg"
+       style="border: 0px"
+       role="button">
+        Open Playlist in Spotify!
+    </a>
+    @Html.ActionLink("", "Index", "WorkingOut", null, new { @class = "glyphicon glyphicon-chevron-right" })
+</div>
+
+<div class="pushright">
+    @Html.ActionLink("Admin Access - Requires Being Logged In", "Index", "OfficeTimeAdmin", null)
+</div>
+<p>
+    &nbsp;
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <span class="PlaylistInfo">@Html.DisplayNameFor(model => model.Artist)</span>
+            </th>
+            <th>
+                <span class="PlaylistInfo"> @Html.DisplayNameFor(model => model.Title)</span>
+            </th>
+            <th>
+                <span class="PlaylistInfo">@Html.DisplayNameFor(model => model.Genre)</span>
+            </th>
+            <th>
+                <span class="PlaylistInfo"> @Html.DisplayNameFor(model => model.Play)</span>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <span class="ArtistInfo">@Html.DisplayFor(modelItem => item.Artist)</span>
+                </td>
+                <td>
+                    <span class="ArtistInfo">@Html.DisplayFor(modelItem => item.Title)</span>
+                </td>
+                <td>
+                    <span class="ArtistInfo">@Html.DisplayFor(modelItem => item.Genre)</span>
+                </td>
+                <td>
+                    @Html.Raw(item.Play)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

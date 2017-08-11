@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Message"]</h2>
+<hr />
+&nbsp;
+<h3>A little bit about this project</h3>
+
+<p>Playlist Pro is a .NET Core MVC project created by Matthew Grainger.  The goal of this project is not to 
+    create something that will change the world, but to create something that displays Matt's knowledge of 
+    building a basic .NET Core MVC web application.  Right now it is in what we would conisder an Alpha
+    version, and some upcoming features planned for this project are Spotify API connectivity for adding
+    songs directly to the playlist from the application, as well as a user-specific page that will allow
+    folks to save specific songs to their own dashboard, so that they can push out their own playlists.
+</p>
+
+&nbsp;
+
+<h3>How to access and modify this application with Admin access</h3>
+<p>
+    If you want to create, edit, or delete songs from the 4 included playlists, you must first log in as 
+    the administrator.  To do this, use the login name Matt_Admin@gmail.com and the password Password1!
+</p>
+<p>
+    Once you have done this, you will be redirected to the OfficeTimeAdmin view that will allow the user to 
+    modify the playlists on the web application.  After hitting the "Add song" button, to correctly add the spotify preview of the song to the view,
+    you will need to perform the following steps: 1) Open Spotify and find the song you want to add 2) Click on the 
+    "Share" button.  3) Click on the open and close angle bracket button to copy the text with the correct HTML formatting 4) Paste that info in the "Preview on Spotify"
+    field in Playlist Pro 5) Edit the "Height" parameter to the size of 200.  
+</p>
+<p>
+    To add the song to the Spotify playlist (not just the Playlist Pro application), you must log into the Spofify account 
+    with Login name PlaylistPro_MVC and Password P4ssword1! (please note that the password for this is different than the admin
+    password for our application).  From there, find the song that you want, right-click on it, and add it to your desired 
+    playlist.  We hope to completely eliminate this step by implimenting the Spotify API in the future.  Stay tuned!
+</p>
+
